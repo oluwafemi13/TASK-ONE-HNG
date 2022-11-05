@@ -19,16 +19,16 @@ namespace HNGTaskOne.Controllers
         //[HttpPost( Name = "Operations")]
         [ProducesResponseType((int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
-        public IActionResult Operations()
+        public IActionResult Operations(int x, int y, string operation)
         {
-            char operation = '+';
+             operation = "Addition".ToLower();
             int result = 0;
-            int x = 5;
-            int y = 3;
+             x = 5;
+             y = 3;
            
             
            
-            if(operation == '+')
+            if(operation == "Addition".ToLower())
             {
                 object operationtype = OperationType.Addition;
                 result = x + y;
@@ -36,14 +36,14 @@ namespace HNGTaskOne.Controllers
 
                 return Ok(final);
             }
-            else if(operation == '-')
+            else if(operation == "subtraction".ToLower())
             {
                 object operationtype = OperationType.Subtraction;
                 result = x - y;
                 string final = string.Join(',', response.SlackUsername, result, operationtype);
                 return Ok(final);
             }
-            else if (operation == '*')
+            else if (operation == "multiplication".ToLower())
             {
                 object operationtype = OperationType.Subtraction;
                 result = x * y;
