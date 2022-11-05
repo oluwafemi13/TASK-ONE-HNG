@@ -19,19 +19,17 @@ namespace HNGTaskOne.Controllers
             _responseFactory = responseFactory; 
         }
 
-        [HttpPost("[action]/{x}/{y}", Name = "Operation")]
+        [HttpPost( Name = "Operations")]
         [ProducesResponseType((int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
-        public ActionResult<string> Operations([FromBody] int x, char operation, int y)
+        public ActionResult<string> Operations()
         {
+            char operation = '+';
             int result = 0;
+            int x = 5;
+            int y = 3;
             Response response = new Response();
-            op = new Operation()
-            {
-                x = x,
-                y = y,
-
-            };
+            
            
             if(operation == '+')
             {
