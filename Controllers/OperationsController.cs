@@ -32,7 +32,7 @@ namespace HNGTaskOne.Controllers
             {
                 object operationtype = OperationType.Addition;
                 result = x + y;
-                string final = string.Join(',', response.SlackUsername, operationtype, result);
+                string final = string.Join(',', response.SlackUsername, result, operationtype);
 
                 return Ok(final);
             }
@@ -40,14 +40,14 @@ namespace HNGTaskOne.Controllers
             {
                 object operationtype = OperationType.Subtraction;
                 result = x - y;
-                string final = string.Join(',', response.SlackUsername, operationtype, result);
+                string final = string.Join(',', response.SlackUsername, result, operationtype);
                 return Ok(final);
             }
             else if (operation == '*')
             {
                 object operationtype = OperationType.Subtraction;
                 result = x * y;
-                string final = string.Join(',', response.SlackUsername, operationtype, result);
+                string final = string.Join(',', response.SlackUsername, result, operationtype);
                 return Ok(final);
             }
 
