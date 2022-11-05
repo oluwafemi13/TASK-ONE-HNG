@@ -19,24 +19,43 @@ namespace HNGTaskOne.Controllers
         //[HttpPost("[action]/{x}/{y}/{operation}")]
         [ProducesResponseType((int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
-        public IActionResult Operations([FromBody]int x, int y, string operation)
+        public IActionResult Operations([FromBody] Operation operation )
         {
-             operation = "Addition".ToLower();
+             //operation = "Addition".ToLower();
             int result = 0;
-             x = 5;
-             y = 3;
+            /* x = 5;
+             y = 3;*/
            
             
            
-            if(operation == "Addition".ToLower())
+            if(operation.operations == OperationType.Addition)
             {
                 object operationtype = OperationType.Addition;
-                result = x + y;
-                string final = string.Join(',', response.SlackUsername, result, operationtype);
+                operation.result = operation.x + operation.y;
+                
+                //string final = string.Join(',', response.SlackUsername, result, operationtype);
 
-                return Ok(final);
+                return Ok(operation);
             }
-            else if(operation == "subtraction".ToLower())
+            else if (operation.operations == OperationType.Subtraction)
+            {
+                object operationtype = OperationType.Subtraction;
+                operation.result = operation.x - operation.y;
+
+                //string final = string.Join(',', response.SlackUsername, result, operationtype);
+
+                return Ok(operation);
+            }
+            else if (operation.operations == OperationType.Multiplication)
+            {
+                object operationtype = OperationType.Multiplication;
+                operation.result = operation.x * operation.y;
+
+                //string final = string.Join(',', response.SlackUsername, result, operationtype);
+
+                return Ok(operation);
+            }
+            /*else if(operation == "subtraction".ToLower())
             {
                 object operationtype = OperationType.Subtraction;
                 result = x - y;
@@ -50,9 +69,9 @@ namespace HNGTaskOne.Controllers
                 string final = string.Join(',', response.SlackUsername, result, operationtype);
                 return Ok(final);
             }
+*/
 
-
-          return Ok(result);
+          return Ok(operation);
 
 
 
