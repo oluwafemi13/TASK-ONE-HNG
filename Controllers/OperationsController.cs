@@ -15,8 +15,8 @@ namespace HNGTaskOne.Controllers
         Response response = new Response();
 
 
-
-        [HttpPost("[action]/{x}/{y}/{operation}")]
+        [HttpPost]
+        //[HttpPost("[action]/{x}/{y}/{operation}")]
         [ProducesResponseType((int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
         public IActionResult Operations([FromBody]int x, int y, string operation)
