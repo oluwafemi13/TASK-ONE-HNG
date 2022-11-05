@@ -3,7 +3,7 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "https://bio-hng.herokuapp.com/Operations",
+      "launchUrl": "https://bio-hng.herokuapp.com/api/Operations",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
@@ -11,7 +11,7 @@
     "HNGTaskOne": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "https://bio-hng.herokuapp.com/Operations",
+      "launchUrl": "https://bio-hng.herokuapp.com/api/Operations",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },

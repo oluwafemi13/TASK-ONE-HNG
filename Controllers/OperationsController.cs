@@ -7,19 +7,16 @@ using System.Net;
 namespace HNGTaskOne.Controllers
 {
     [ApiController]
-    [Route("[Controller]")]
+    [Route("api/[Controller]")]
+    [Produces("application/json")]
     public class OperationsController: ControllerBase
     {
         private static Operation op;
+        Response response = new Response();
 
-        private readonly ResponseFactory _responseFactory;
 
-        public OperationsController(ResponseFactory responseFactory)
-        {
-            _responseFactory = responseFactory; 
-        }
 
-        [HttpPost( Name = "Operations")]
+        //[HttpPost( Name = "Operations")]
         [ProducesResponseType((int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
         public IActionResult Operations()
@@ -28,7 +25,7 @@ namespace HNGTaskOne.Controllers
             int result = 0;
             int x = 5;
             int y = 3;
-            Response response = new Response();
+           
             
            
             if(operation == '+')
