@@ -16,7 +16,7 @@ namespace HNGTaskOne.Controllers
 
 
         [HttpPost]
-        [Route("api/Operations/Operation")]
+        
         //[HttpPost("[action]/{x}/{y}/{operation}")]
         [ProducesResponseType((int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
