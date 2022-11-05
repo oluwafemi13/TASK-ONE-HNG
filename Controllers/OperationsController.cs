@@ -55,7 +55,7 @@ namespace HNGTaskOne.Controllers
             }
 
 
-          return NoContent();
+          return Ok(result);
 
 
 
