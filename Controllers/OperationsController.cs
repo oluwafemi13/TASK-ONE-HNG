@@ -16,10 +16,11 @@ namespace HNGTaskOne.Controllers
 
 
         [HttpPost]
+        [Route("api/Operations/Operation")]
         //[HttpPost("[action]/{x}/{y}/{operation}")]
         [ProducesResponseType((int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
-        public IActionResult Operations([FromBody] Operation operation )
+        public IActionResult Operation([FromBody] Operation operation )
         {
              //operation = "Addition".ToLower();
             int result = 0;
