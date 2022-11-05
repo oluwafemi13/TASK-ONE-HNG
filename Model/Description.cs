@@ -1,8 +1,8 @@
 ﻿namespace HNGTaskOne.Model
 {
-    public class Description
+    public class Description: Username
     {
-        public string SlackUsername { get; set; } = "Iwuchukwu Ikechukwu";
+        //public string SlackUsername { get; set; } = "Iwuchukwu Ikechukwu";
 
         public bool Backend { get; set; } = true;
 
