@@ -22,7 +22,7 @@ namespace HNGTaskOne.Controllers
         [HttpPost("[action]/{x}/{y}", Name = "Operation")]
         [ProducesResponseType((int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
-        public ActionResult<string> operation([FromBody] int x, char operation, int y)
+        public ActionResult<string> Operations([FromBody] int x, char operation, int y)
         {
             int result = 0;
             Response response = new Response();
